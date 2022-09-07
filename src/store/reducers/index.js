@@ -69,6 +69,29 @@ export default function reducer(state = initValue, action) {
           return item.id !== payload
         }),
       }
+    case 'SAVE_DRAGITEM':
+      return {
+        ...state,
+        MovingItem: {
+          ...state.MovingItem,
+          MovingId: payload,
+        },
+      }
+    case 'CHANGE_DRAGITEM':
+      return {
+        ...state,
+        MovingItem: { ...payload },
+        TASKS: state.TASKS.map((item) => {
+          if (item.id === payload.MovingId) {
+            return {
+              id: payload.MovingId,
+              status: payload.MovingIn,
+              title: item.title,
+            }
+          }
+          return item
+        }),
+      }
 
     default:
       return state

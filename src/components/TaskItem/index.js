@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { add_todo, delete_todo } from '../../store/action'
+import { add_todo, delete_todo, save_dragItem } from '../../store/action'
 import classNames from 'classnames'
 export default function ListItem({ id, name, setFlag }) {
   const [showDelete, setShowDelete] = useState(false)
@@ -47,6 +47,13 @@ export default function ListItem({ id, name, setFlag }) {
     // console.log(id)
     dispatch(delete_todo(id))
   }
+  const onDragStart = (e) => {
+    // console.log(e)
+    // console.log(id)
+    setShowDelete(false)
+    dispatch(save_dragItem(id))
+  }
+
   return (
     <div>
       {name === '' && (
@@ -68,6 +75,7 @@ export default function ListItem({ id, name, setFlag }) {
           onMouseEnter={() => setShowDelete(true)}
           onMouseLeave={() => setShowDelete(false)}
           draggable="true"
+          onDragStart={(e) => onDragStart(e)}
         >
           {name}
           <div

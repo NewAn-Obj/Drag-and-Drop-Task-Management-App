@@ -5,8 +5,7 @@ import './index.scss'
 export default function Task() {
   const colorList = ['#eedcdc', '#9cd28e', '#dddddd']
   const state = useSelector((state) => state)
-  // console.log(state)
-  const { STATUS_CODE, TASKS } = state
+  const { STATUS_CODE, TASKS, MovingItem } = state
   return (
     <div className="task">
       {Object.keys(STATUS_CODE).map((item, i) => {
@@ -17,6 +16,7 @@ export default function Task() {
             type={item}
             name={STATUS_CODE[item]}
             taskList={TASKS}
+            MovingItem={MovingItem}
           ></TaskList>
         )
       })}

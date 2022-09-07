@@ -16,3 +16,15 @@ export const delete_todo = (id) => {
     payload: id,
   }
 }
+export const save_dragItem = (id) => {
+  return {
+    type: 'SAVE_DRAGITEM',
+    payload: id,
+  }
+}
+export const change_dragItem = (payload) => {
+  return {
+    type: 'CHANGE_DRAGITEM',
+    payload,
+  }
+}
