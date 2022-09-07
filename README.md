@@ -1,4 +1,4 @@
-yarn add/npm install 安装依赖
+yarn /npm install 安装依赖
 
 全局安装 json-server （本项目用 json-server 模拟后台）
 
