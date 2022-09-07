@@ -21,21 +21,21 @@ export default function TaskList({ style, name, taskList, type, MovingItem }) {
   // console.log(flag)
   const onDragOver = (e) => {
     e.preventDefault()
-    console.log('经过了' + name)
+    // console.log('经过了' + name)
   }
   const onDragEnter = (e) => {
     e.preventDefault()
-    console.log('进入了' + name)
+    // console.log('进入了' + name)
     setMoveIn(name)
   }
   const onDragLeave = (e) => {
     e.preventDefault()
-    console.log('离开了' + name)
+    // console.log('离开了' + name)
     setMoveIn('')
   }
   const onDrop = (e) => {
     e.preventDefault()
-    console.log('放在了' + name)
+    // console.log('放在了' + name)
     const payload = {
       ...MovingItem,
       MovingIn: type,

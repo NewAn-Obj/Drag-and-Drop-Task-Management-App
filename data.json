@@ -1,0 +1,49 @@
+{
+  "TASKS": [
+    {
+      "id": 1,
+      "status": "STATUS_DONE",
+      "title": "HTML"
+    },
+    {
+      "id": 2,
+      "status": "STATUS_DONE",
+      "title": "JS"
+    },
+    {
+      "id": 3,
+      "status": "STATUS_DONE",
+      "title": "CSS"
+    },
+    {
+      "id": 1662542052975,
+      "status": "STATUS_DOING",
+      "title": "AXIOS"
+    },
+    {
+      "id": 1662542063283,
+      "status": "STATUS_DOING",
+      "title": "AJAX"
+    },
+    {
+      "id": 1662542095508,
+      "status": "STATUS_TODO",
+      "title": "NODE"
+    },
+    {
+      "id": 1662542107563,
+      "status": "STATUS_TODO",
+      "title": "FLUTTER"
+    },
+    {
+      "id": 1662542114404,
+      "status": "STATUS_DOING",
+      "title": "REACT"
+    },
+    {
+      "id": 1662542132251,
+      "status": "STATUS_TODO",
+      "title": "VUE"
+    }
+  ]
+}

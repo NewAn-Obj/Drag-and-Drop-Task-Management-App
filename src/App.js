@@ -1,8 +1,18 @@
+import React, { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
 import Task from './pages/Task'
 import NotFound from './pages/NotFound'
+import { get_ItemList } from './store/action'
+import { useDispatch } from 'react-redux'
 function App() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const getTasks = async () => {
+      await dispatch(get_ItemList())
+    }
+    getTasks()
+  }, [dispatch])
   return (
     <BrowserRouter>
       <div className="App">

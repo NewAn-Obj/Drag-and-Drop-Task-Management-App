@@ -4,38 +4,17 @@ const initValue = {
     STATUS_DOING: 'Learning...',
     STATUS_DONE: 'Complete',
   },
-  TASKS: [
-    {
-      id: 0,
-      status: 'STATUS_TODO',
-      title: '学习HTML',
-    },
-    {
-      id: 1,
-      status: 'STATUS_TODO',
-      title: '学习CSS',
-    },
-    {
-      id: 2,
-      status: 'STATUS_DOING',
-      title: '学习JS',
-    },
-    {
-      id: 3,
-      status: 'STATUS_DOING',
-      title: '学习AXIOS',
-    },
-    {
-      id: 4,
-      status: 'STATUS_DONE',
-      title: '学习REDUX',
-    },
-  ],
+  TASKS: [],
 }
 
 export default function reducer(state = initValue, action) {
   const { type, payload } = action
   switch (type) {
+    case 'GET_ITEMLIST':
+      return {
+        ...state,
+        TASKS: [...payload],
+      }
     case 'ADD_EMPTYTODO':
       return {
         ...state,
